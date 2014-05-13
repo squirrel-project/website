@@ -41,7 +41,9 @@
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>ruby-sass</build_depend>
+  <build_depend>roslaunch</build_depend>
   <run_depend>ruby-sass</run_depend>
+  <run_depend>roslaunch</run_depend>
   <run_depend>rospy</run_depend>
 
 
