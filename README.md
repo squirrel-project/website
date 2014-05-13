@@ -40,7 +40,7 @@ Stat a local server:
 roslaunch squirrel_website server.launch
 ```
 
-You can now browse to the url http://localhost:9000 and get a live update whenever you edit aby html file located in squirrel_website/html.
+You can now browse to the url http://localhost:9000 and get a live update whenever you edit any html file located in squirrel_website/html.
 
 
 # Remote updating
