@@ -19,7 +19,6 @@ git clone git clone git@github.com:squirrel-project/website
 
 Add the workspace to the package path and install dependencies:
 ```bash
-cd ..
 export ROS_PACKAGE_PATH=~/squirrel_ws:$ROS_PACKAGE_PATH
 ```
 
@@ -28,7 +27,7 @@ Install required dependencies:
 rosdep install squirrel_website
 ```
 
-If you want to permanently add the workspace to your repository path you can add the source the package path in your bashrc:
+If you want to permanently add the workspace to your repository path you can source the package path in your bashrc:
 ```bash
 echo "export ROS_PACKAGE_PATH=~/squirrel_ws:$ROS_PACKAGE_PATH" >> ~/.bashrc
 ```
