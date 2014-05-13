@@ -1,0 +1,45 @@
+$header-active-color: white;
+
+body > #header{
+    .imageContainer{
+        padding: 30px 0 0 0;
+    }
+    #navigation{
+        margin-top: 30px;
+        background-color: #0C0C0C;
+        ul{
+            font-size: 14px;
+            overflow: hidden;
+            li.title{
+                font-size: 28px;
+                color: white;
+                padding: 6px 20px 0 0;
+                font-family: 'Open Sans Condensed', 'Open Sans';
+                background-color: transparent !important;
+            }
+            li{
+                float: left;
+                a{
+                    color: white;
+                    display: inline-block;
+                    padding: 14px 22px;
+                }
+            }
+        }
+    }
+}
+
+
+body > #header #navigation li.active,
+body > #header #navigation li:hover,
+body.index #navigation li.index,
+body.objectives #navigation li.objectives,
+body.consortium #navigation li.consortium,
+body.work-packages #navigation li.work-packages,
+body.media #navigation li.media,
+body.contacts #navigation li.contacts,
+body.public-deliverables #navigation li.public-deliverables,
+body.publications #navigation li.publications{
+    background-color: $header-active-color;
+    a{ color: black !important; }
+}

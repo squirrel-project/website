@@ -1,0 +1,195 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body > #header .imageContainer {
+  padding: 30px 0 0 0; }
+body > #header #navigation {
+  margin-top: 30px;
+  background-color: #0C0C0C; }
+  body > #header #navigation ul {
+    font-size: 14px;
+    overflow: hidden; }
+    body > #header #navigation ul li.title {
+      font-size: 28px;
+      color: white;
+      padding: 6px 20px 0 0;
+      font-family: 'Open Sans Condensed', 'Open Sans';
+      background-color: transparent !important; }
+    body > #header #navigation ul li {
+      float: left; }
+      body > #header #navigation ul li a {
+        color: white;
+        display: inline-block;
+        padding: 14px 10px; }
+
+body > #header #navigation li.active,
+body > #header #navigation li:hover,
+body.index #navigation li.index,
+body.objectives #navigation li.objectives,
+body.consortium #navigation li.consortium,
+body.work-packages #navigation li.work-packages,
+body.media #navigation li.media,
+body.contacts #navigation li.contacts,
+body.public-deliverables #navigation li.public-deliverables,
+body.publications #navigation li.publications {
+  background-color: white; }
+  body > #header #navigation li.active a,
+  body > #header #navigation li:hover a,
+  body.index #navigation li.index a,
+  body.objectives #navigation li.objectives a,
+  body.consortium #navigation li.consortium a,
+  body.work-packages #navigation li.work-packages a,
+  body.media #navigation li.media a,
+  body.contacts #navigation li.contacts a,
+  body.public-deliverables #navigation li.public-deliverables a,
+  body.publications #navigation li.publications a {
+    color: black !important; }
+
+body > .content {
+  margin-top: 40px;
+  min-height: 800px;
+  line-height: 1.7em; }
+  body > .content, body > .content a {
+    color: #323232; }
+  body > .content a:hover {
+    text-decoration: underline; }
+  body > .content h1 {
+    font-family: 'Open Sans Condensed';
+    font-size: 50px;
+    color: #e0e0e0;
+    background-color: white;
+    padding-right: 10px;
+    margin-bottom: 30px; }
+  body > .content .news {
+    margin: 0 0 110px; }
+    body > .content .news h2 {
+      padding-bottom: 10px;
+      font-weight: 700;
+      color: #505050; }
+    body > .content .news .date {
+      border-bottom: 1px solid #c0c0c0;
+      font-size: 12px;
+      padding-bottom: 10px;
+      color: #808080; }
+    body > .content .news .text {
+      line-height: 1.8em;
+      margin-top: 20px;
+      /*
+       *-moz-column-count:2; [> Firefox <]
+       *-webkit-column-count:2; [> Safari and Chrome <]
+       *column-count:2;
+       */ }
+      body > .content .news .text img {
+        float: left;
+        margin: 5px; }
+      body > .content .news .text a.more {
+        font-size: 13px;
+        position: relative;
+        color: #0a0a0a; }
+        body > .content .news .text a.more:hover {
+          text-decoration: underline; }
+
+#footer {
+  background-color: #141414;
+  padding-top: 10px; }
+  #footer .partners {
+    overflow: hidden; }
+    #footer .partners .partner {
+      float: left;
+      width: 250px; }
+      #footer .partners .partner .title {
+        height: 52px; }
+        #footer .partners .partner .title a {
+          color: white;
+          font-size: 13px; }
+      #footer .partners .partner.sevenFp {
+        width: 220px; }
+  #footer .funding {
+    border-top: 1px solid #828282;
+    color: white;
+    font-size: 14px;
+    padding: 20px 0 50px;
+    margin-top: 60px; }
+    #footer .funding .title {
+      margin-bottom: 10px; }
+
+body.objectives p {
+  margin-bottom: 20px; }
+
+body.contacts p {
+  margin-bottom: 30px;
+  line-height: 1.4em; }
+
+body.consortium div.participant {
+  margin-bottom: 100px; }
+  body.consortium div.participant h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 50px 0 14px; }
+  body.consortium div.participant span.organisation, body.consortium div.participant span.main-tasks, body.consortium div.participant span.experience {
+    font-weight: bold; }
+  body.consortium div.participant div.organisation {
+    border-top: 1px solid gainsboro;
+    padding-top: 20px; }
+  body.consortium div.participant div.organisation, body.consortium div.participant div.main-tasks, body.consortium div.participant div.experience {
+    margin-bottom: 20px; }
+  body.consortium div.participant p {
+    margin-top: 20px; }
+
+body {
+  font-family: 'Open Sans';
+  font-weight: 400; }
+
+.centered {
+  width: 960px;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none; }
+  a:active {
+    position: relative;
+    bottom: -1px; }

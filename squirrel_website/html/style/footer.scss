@@ -1,0 +1,34 @@
+#footer{
+    background-color: rgb( 20,20,20 );
+    padding-top: 10px;
+
+    .partners{
+        overflow: hidden;
+
+        .partner{
+            float: left;
+            width: 250px;
+            .title{
+                height: 52px;
+                a{
+                    color: white;
+                    font-size: 13px;
+                }
+            }
+            &.sevenFp{
+                width: 220px;
+            }
+        }
+    }
+
+    .funding{
+        border-top: 1px solid rgb( 130, 130, 130 );
+        color: white;
+        font-size: 14px;
+        padding: 20px 0 50px;
+        margin-top: 60px;
+        .title{
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+body.consortium{
+    div.participant{
+        margin-bottom: 100px;
+
+        h2{
+            font-weight: bold;
+            font-size: 20px;
+            margin: 50px 0 14px;
+        }
+        span.organisation, span.main-tasks, span.experience{
+            font-weight: bold;
+        }
+        div.organisation{
+            $color: 220;
+            border-top: 1px solid rgb( $color, $color, $color );
+            padding-top: 20px;
+        }
+        div.organisation, div.main-tasks, div.experience{
+            margin-bottom: 20px;
+        }
+        p{
+            margin-top: 20px;
+        }
+    }
+}

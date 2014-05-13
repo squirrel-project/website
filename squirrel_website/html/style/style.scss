@@ -1,0 +1,23 @@
+@import 'reset.scss';
+@import 'header.scss';
+@import 'content.scss';
+@import 'footer.scss';
+@import 'objectives.scss';
+@import 'contacts.scss';
+@import 'consortium.scss';
+
+body{
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+.centered{
+    width: 960px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    &:active{
+        position: relative;
+        bottom: -1px;
+    }
+}
