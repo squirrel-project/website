@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
     <arg name="repository" default="git@github.com:squirrel-project/squirrel-project.github.io" />
-    <node name="build" pkg="squirrel_website" type="build.py" output="screen" required="true">
+    <node name="build" pkg="squirrel_website" type="website_builder.py" output="screen" required="true">
         <param name="repository" value="$( arg repository )" />
     </node>
 </launch>

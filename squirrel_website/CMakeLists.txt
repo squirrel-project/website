@@ -158,6 +158,6 @@ catkin_package(
 add_custom_target( build_website ALL )
 add_custom_command(
     TARGET build_website
-    COMMAND ./build.bash
-    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+    COMMAND roslaunch
+    ARGS squirrel_website build.launch
     )
