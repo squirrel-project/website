@@ -1,25 +1,34 @@
 body.consortium, body.index{
-    div.participant{
-        margin-bottom: 100px;
+    table{
+        td.image{
+            text-align: center;
+        }
+        td{
+            padding: 20px 40px;
+            vertical-align: top;
+        }
+        td.name, td.ip{
+            padding-top: 40px;
+        }
+        td.name{
+            cursor: pointer;
+            &:hover a{
+                text-decoration: underline;
+            }
+        }
+        tr.tow{ td.name, td.ip{ padding-top: 39px; }}
+        tr.university-twente{ td.name, td.ip{ padding-top: 9px; }}
+        tr.festo-didactic{ td.name, td.ip{ padding-top: 7px; }}
+        tr.fraunhofer-ipa{ td.name, td.ip{ padding-top: 13px; }}
+        tr.idmind{ td.name, td.ip{ padding-top: 29px; }}
 
-        h2{
-            font-weight: bold;
-            font-size: 20px;
-            margin: 50px 0 14px;
+        a span.link{
+            color: #999;
+            text-decoration: none !important;
         }
-        span.organisation, span.main-tasks, span.experience{
-            font-weight: bold;
-        }
-        div.organisation{
-            $color: 220;
-            border-top: 1px solid rgb( $color, $color, $color );
-            padding-top: 20px;
-        }
-        div.organisation, div.main-tasks, div.experience{
-            margin-bottom: 20px;
-        }
-        p{
-            margin-top: 20px;
+        a.link{
+            color: #999;
+            text-decoration: none !important;
         }
     }
 }

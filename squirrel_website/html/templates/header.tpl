@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-    <script data-main="application" src="js/require.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <body class="BODYCLASSNAME">
