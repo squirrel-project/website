@@ -33,9 +33,10 @@ body > #header{
 
 body > #header #navigation li.active,
 body > #header #navigation li:hover,
-body.index #navigation li.index,
+body.home #navigation li.home,
 body.objectives #navigation li.objectives,
 body.consortium #navigation li.consortium,
+body.index #navigation li.consortium,
 body.work-packages #navigation li.work-packages,
 body.media #navigation li.media,
 body.contacts #navigation li.contacts,
