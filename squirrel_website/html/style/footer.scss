@@ -1,7 +1,7 @@
 #footer{
     margin-top: 150px;
     background-color: rgb( 20,20,20 );
-    padding: 40px 0 20px;
+    padding: 40px 0 50px;
     overflow: hidden;
 
     .partners{
@@ -10,6 +10,7 @@
         overflow: hidden;
     }
     .partner, .funding{
+        padding-top: 5px;
         line-height: 1.8em;
         font-size: 14px;
         &, a{ color: white; }
@@ -17,24 +18,25 @@
 
     .partner{
         float: left;
-        width: 270px;
+        width: 260px;
+        margin-right: 28px;
         a.imageContainer{
             float: left;
         }
         a.text{
+            margin-left: 81px;
             display: block;
-            margin-left: 75px;
         }
         &.seventhFramework img{
-            width: 60px;
-            height: 49px;
+            width: 65px;
+            height: 53px;
         }
     }
 
     .funding{
-        padding: 0 0 50px 30px;
+        padding-left: 30px;
         float: left;
-        width: 640px;
+        width: 580px;
         span.title{
             padding-right: 17px;
         }
