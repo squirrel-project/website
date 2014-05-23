@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+import roslib
+roslib.load_manifest( 'squirrel_website' )
+import rospy
 import SimpleHTTPServer, SocketServer, os, subprocess
 from SimpleHTTPServer import SimpleHTTPRequestHandler 
 import sys, re
@@ -12,13 +15,13 @@ def _isInstalled( program ):
 
 def _exec( cmd, shell=False, silent=False ):
     if not silent:
-        print( 'Executing command "%s"' % cmd )
+        rospy.loginfo( 'Executing command "%s"' % cmd )
     if not shell:
         cmd = cmd.split( ' ' )
     p = subprocess.Popen( cmd, shell=shell )
     result = p.wait()
     if result != 0 and not silent:
-        print( 'Command "%s" failed' % cmd )
+        rospy.logerr( 'Command "%s" failed' % cmd )
     return result
 
 
@@ -64,7 +67,7 @@ class Handler( SimpleHTTPRequestHandler ):
 
     def compileScss( self ):
         if _notInstalled( 'scss' ):
-            print( 'Scss not installed, not building stylesheet' )
+            rospy.logwarn( 'Scss not installed, not building stylesheet' )
             return ''
 
         filepath = '/tmp/style.css'
@@ -73,7 +76,6 @@ class Handler( SimpleHTTPRequestHandler ):
             return f.read()
 
     def sendCss( self ):
-        print 'Send css'
         content = self.compileScss()
         self.sendContent( content, 'text/css' )
         self.send_header("Content-length", len( content ))
@@ -95,12 +97,13 @@ def cdIntoHTML():
     os.chdir( htmlDirectory )
 
 if __name__ == '__main__':
+    rospy.init_node( 'debug_server' )
     cdIntoHTML()
-    port = int(sys.argv[1])
+    port = int(rospy.get_param( '~port' ))
 
     # Check if scss is installed
     if _notInstalled( 'scss' ):
-        print( 'Scss not installed, not building stylesheet' )
+        rospy.logwarn( 'Scss not installed, not building stylesheet' )
 
     # Start server
     SocketServer.TCPServer.allow_reuse_address = True
