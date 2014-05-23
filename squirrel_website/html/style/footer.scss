@@ -1,34 +1,41 @@
 #footer{
+    margin-top: 150px;
     background-color: rgb( 20,20,20 );
-    padding-top: 10px;
+    padding: 40px 0 20px;
+    overflow: hidden;
 
     .partners{
+        float: left;
+        border-right: 1px solid #555;
         overflow: hidden;
+    }
+    .partner{
+        float: left;
+        width: 270px;
+        font-size: 14px;
+        line-height: 1.6em;
+        a{
+            color: white;
+        }
 
-        .partner{
+        a.imageContainer{
             float: left;
-            width: 250px;
-            .title{
-                height: 52px;
-                a{
-                    color: white;
-                    font-size: 13px;
-                }
-            }
-            &.sevenFp{
-                width: 220px;
-            }
+        }
+        a.text{
+            display: block;
+            margin-left: 75px;
+        }
+        &.seventhFramework img{
+            width: 60px;
+            height: 49px;
         }
     }
 
     .funding{
-        border-top: 1px solid rgb( 130, 130, 130 );
         color: white;
+        padding: 0 0 50px 30px;
         font-size: 14px;
-        padding: 20px 0 50px;
-        margin-top: 60px;
-        .title{
-            margin-bottom: 10px;
-        }
+        float: left;
+        line-height: 1.8em;
     }
 }
