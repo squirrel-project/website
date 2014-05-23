@@ -9,15 +9,15 @@
         border-right: 1px solid #555;
         overflow: hidden;
     }
+    .partner, .funding{
+        line-height: 1.8em;
+        font-size: 14px;
+        &, a{ color: white; }
+    }
+
     .partner{
         float: left;
         width: 270px;
-        font-size: 14px;
-        line-height: 1.6em;
-        a{
-            color: white;
-        }
-
         a.imageContainer{
             float: left;
         }
@@ -32,10 +32,11 @@
     }
 
     .funding{
-        color: white;
         padding: 0 0 50px 30px;
-        font-size: 14px;
         float: left;
-        line-height: 1.8em;
+        width: 640px;
+        span.title{
+            padding-right: 17px;
+        }
     }
 }

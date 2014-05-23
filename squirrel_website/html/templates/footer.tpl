@@ -7,7 +7,7 @@
                 <a class="text" href="http://cordis.europa.eu/fp7/ict" target="_blank">EUROPEAN COMMISSION 7TH FRAMEWORK</a>
             </div>
         </div>
-        <div class="funding ">FUNDING<br />This project is funded by the European Community's Seventh Framework</div>
+        <div class="funding "><span class="title">FUNDING</span>This project is funded by the European Community's Seventh Framework Programme under grant agreement No 610532.</div>
         </div>
     </div>
 </div>
