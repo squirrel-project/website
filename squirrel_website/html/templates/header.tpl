@@ -4,7 +4,7 @@
     <title>Squirrel</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <script data-main="application" src="js/require.js"></script>
 </head>
 
