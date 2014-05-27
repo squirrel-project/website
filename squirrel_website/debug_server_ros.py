@@ -4,9 +4,9 @@ roslib.load_manifest( 'squirrel_website' )
 import rospy
 import debug_server
 
-debug_server.logwarn  = rospy.logwarn
-debug_server.loginfo  = rospy.loginfo
-debug_server.logerror = rospy.logerror
+debug_server.logwarn = rospy.logwarn
+debug_server.loginfo = rospy.loginfo
+debug_server.logerr  = rospy.logerr
 
 if __name__ == '__main__':
     rospy.init_node( 'debug_server' )

@@ -5,9 +5,9 @@ from SimpleHTTPServer import SimpleHTTPRequestHandler
 import sys, re
 
 # These handler can be overwritten e.g. by rospy.logwarn etc.
-logwarn  = lambda s: print( s )
-logerror = lambda s: print( s )
-loginfo  = lambda s: print( s )
+logwarn = lambda s: print( s )
+logerr  = lambda s: print( s )
+loginfo = lambda s: print( s )
 
 def _notInstalled( program ):
     return not _isInstalled( program )
@@ -112,7 +112,7 @@ def start( port ):
     httpd.serve_forever()
 
 if __name__ == '__main__':
-    port = 8080
+    port = 9000
     if len( sys.argv ) > 1:
         port = int( sys.argv[ 1 ])
     start( port )
