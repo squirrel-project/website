@@ -1,10 +1,13 @@
 #!/usr/bin/env python
-import roslib
-roslib.load_manifest( 'squirrel_website' )
-import rospy
+from __future__ import print_function
 import SimpleHTTPServer, SocketServer, os, subprocess
 from SimpleHTTPServer import SimpleHTTPRequestHandler 
 import sys, re
+
+# These handler can be overwritten e.g. by rospy.logwarn etc.
+logwarn  = lambda s: print( s )
+logerror = lambda s: print( s )
+loginfo  = lambda s: print( s )
 
 def _notInstalled( program ):
     return not _isInstalled( program )
@@ -15,13 +18,13 @@ def _isInstalled( program ):
 
 def _exec( cmd, shell=False, silent=False ):
     if not silent:
-        rospy.loginfo( 'Executing command "%s"' % cmd )
+        loginfo( 'Executing command "%s"' % cmd )
     if not shell:
         cmd = cmd.split( ' ' )
     p = subprocess.Popen( cmd, shell=shell )
     result = p.wait()
     if result != 0 and not silent:
-        rospy.logerr( 'Command "%s" failed' % cmd )
+        logerr( 'Command "%s" failed' % cmd )
     return result
 
 
@@ -36,7 +39,6 @@ class Handler( SimpleHTTPRequestHandler ):
         matcher = re.match( '/?(.*)\.html', self.path )
         if matcher:
             pagename = matcher.group( 1 )
-            print 'content pos: %s' % content.find( 'BODYCLASSNAME' )
             content = content.replace( 'BODYCLASSNAME', pagename )
         return content
 
@@ -67,7 +69,7 @@ class Handler( SimpleHTTPRequestHandler ):
 
     def compileScss( self ):
         if _notInstalled( 'scss' ):
-            rospy.logwarn( 'Scss not installed, not building stylesheet' )
+            logwarn( 'Scss not installed, not building stylesheet' )
             return ''
 
         filepath = '/tmp/style.css'
@@ -96,17 +98,21 @@ def cdIntoHTML():
     htmlDirectory = '%s/html' % baseDirectory
     os.chdir( htmlDirectory )
 
-if __name__ == '__main__':
-    rospy.init_node( 'debug_server' )
+def start( port ):
     cdIntoHTML()
-    port = int(rospy.get_param( '~port' ))
 
     # Check if scss is installed
     if _notInstalled( 'scss' ):
-        rospy.logwarn( 'Scss not installed, not building stylesheet' )
+        logwarn( 'Scss not installed, not building stylesheet' )
 
     # Start server
     SocketServer.TCPServer.allow_reuse_address = True
     httpd = SocketServer.TCPServer(( '', port ), Handler )
-    print 'Serving from port %s' % port
+    loginfo( 'Serving from port %s' % port )
     httpd.serve_forever()
+
+if __name__ == '__main__':
+    port = 8080
+    if len( sys.argv ) > 1:
+        port = int( sys.argv[ 1 ])
+    start( port )

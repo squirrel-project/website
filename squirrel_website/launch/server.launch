@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
     <arg name="port" default="9000" />
-    <node name="debug_server" pkg="squirrel_website" type="debug_server.py" output="screen" required="true">
+    <node name="debug_server" pkg="squirrel_website" type="debug_server_ros.py" output="screen" required="true">
         <param name="port" value="$( arg port )" />
     </node>
 </launch>
