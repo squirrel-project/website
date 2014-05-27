@@ -63,7 +63,8 @@ class Builder( object ):
         cloneRepository = ' && '.join([
             'git clone %s %s' % ( self._repository, self._targetPath ),
             'cd %s' % self._targetPath,
-            'git rm -rf .' 
+            'git rm -rf *.html', 
+            'git rm -rf images'
         ])
         args = ( self._repository, self._targetPath )
         result = self._exec( cloneRepository, shell=True )
