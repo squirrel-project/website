@@ -130,6 +130,7 @@ class Builder( object ):
         self.buildScss()
         self.compactCss()
         self.buildPages()
+        self.buildRaw()
         self.copyImages()
 
     def buildJs( self ):
@@ -156,11 +157,20 @@ class Builder( object ):
         target = '%s/style.css' % self._buildPath
         self._exec( 'r.js -o cssIn=%s out=%s' % ( src, target ))
 
+
+    def buildRaw( self ):
+        path = '%s/raw' % self._basePath
+        files = [ f[:-5] for f in os.listdir( path ) if f[ 0 ] != '.' ]
+        for filename in files:
+            src    = '%s/pages/%s.html' % ( self._basePath, filename )
+            target = '%s/%s.html' % ( self._buildPath, filename )
+            shutil.copyfile( src, target )
+
     def buildPages( self ):
         path = '%s/pages' % self._basePath
         files = [ f[:-5] for f in os.listdir( path ) if f[ -5: ] == '.html' ]
-        for file in files:
-            self._buildPage( file )
+        for filename in files:
+            self._buildPage( filename )
 
     def _buildPage( self, filename ):
         src    = '%s/pages/%s.html' % ( self._basePath, filename )
