@@ -162,7 +162,7 @@ class Builder( object ):
         path = '%s/raw' % self._basePath
         files = [ f[:-5] for f in os.listdir( path ) if f[ 0 ] != '.' ]
         for filename in files:
-            src    = '%s/pages/%s.html' % ( self._basePath, filename )
+            src    = '%s/raw/%s.html' % ( self._basePath, filename )
             target = '%s/%s.html' % ( self._buildPath, filename )
             shutil.copyfile( src, target )
 
