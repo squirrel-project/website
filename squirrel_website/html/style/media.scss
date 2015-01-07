@@ -1,0 +1,42 @@
+body > .content{
+    .media{
+        margin: 0 0 110px ;
+        .item{
+            margin: 0 0 110px ;
+            h2{
+                font-weight: 700;
+                color: #505050;                
+		line-height: 1.8em;
+                border-bottom: 1px solid #d0d0d0;
+                padding-bottom: 0px;
+                margin-bottom: 0;
+            } 
+            .video{
+                    margin-top: 20px;               
+            }           
+            .text{
+                line-height: 1.8em;
+                margin-top: 20px;
+
+                /*
+                 *-moz-column-count:2; [> Firefox <]
+                 *-webkit-column-count:2; [> Safari and Chrome <]
+                 *column-count:2;
+                 */
+                img{
+                    border: 1px solid #ccc;
+                    padding: 3px;
+                    margin-top: 50px;
+                }
+                a.more{
+                    font-size: 13px;
+                    position: relative;
+                    color: #0a0a0a;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
