@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <meta name="description" content="This is the website of the EU funded project &quot;SQUIRREL - Clearing Clutter Bit by Bit&quot;, which addresses challenges posed to robots by cluttered environments.">
+    <meta name="keywords" content="robot project EU clutter">
 </head>
 
 <body class="BODYCLASSNAME">

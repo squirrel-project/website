@@ -1,0 +1,36 @@
+body > .content{
+    .publications{
+         margin: 0 0 110px ;
+        .item{
+            margin: 0 0 110px ; 
+            h2{
+              font-weight: 700
+            } 
+         .text{
+                line-height: 1.8em;
+                /*
+                 *-moz-column-count:2; [> Firefox <]
+                 *-webkit-column-count:2; [> Safari and Chrome <]
+                 *column-count:2;
+                 */
+               img{
+                    border: 1px solid #ccc;
+                    padding: 3px;
+                    margin-top: 20px;
+                }
+                a.more{
+                    font-size: 13px;
+                    position: relative;
+                    color: #0a0a0a;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                } 
+ 
+                i.more{
+                    font-style: italic;
+		}                                  
+             }
+         }     
+     }  
+ }

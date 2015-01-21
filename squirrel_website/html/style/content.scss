@@ -18,40 +18,4 @@ body > .content{
         padding-right: 10px;
         margin-bottom: 30px;
     }
-    .news{
-        margin: 0 0 110px ;
-        h2{
-            padding-bottom: 10px;
-            font-weight: 700;
-            color: #505050;
-        }
-        .date{
-            border-bottom: 1px solid #c0c0c0;
-            font-size: 12px;
-            padding-bottom: 10px;
-            color: #808080;
-        }
-        .text{
-            line-height: 1.8em;
-            margin-top: 20px;
-
-            /*
-             *-moz-column-count:2; [> Firefox <]
-             *-webkit-column-count:2; [> Safari and Chrome <]
-             *column-count:2;
-             */
-            img{
-                float: left;
-                margin: 5px;
-            }
-            a.more{
-                font-size: 13px;
-                position: relative;
-                color: #0a0a0a;
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
 }
