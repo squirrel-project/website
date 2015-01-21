@@ -64,7 +64,8 @@ class Builder( object ):
             'git clone %s %s' % ( self._repository, self._targetPath ),
             'cd %s' % self._targetPath,
             'git rm -rf *.html', 
-            'git rm -rf images'
+            'git rm -rf images',
+            'git rm --ignore-unmatch -rf videos'
         ])
         args = ( self._repository, self._targetPath )
         result = self._exec( cloneRepository, shell=True )
@@ -132,6 +133,7 @@ class Builder( object ):
         self.buildPages()
         self.buildRaw()
         self.copyImages()
+        self.copyVideos()
 
     def buildJs( self ):
         if self._notInstalled( 'r.js' ):
@@ -184,6 +186,12 @@ class Builder( object ):
     def copyImages( self ):
         src    = '%s/images' % self._basePath
         target = '%s/images' % self._buildPath
+        cmd = 'cp -r %s %s' % ( src, target )
+        self._exec( cmd, shell=True )
+
+    def copyVideos( self ):
+        src    = '%s/videos' % self._basePath
+        target = '%s/videos' % self._buildPath
         cmd = 'cp -r %s %s' % ( src, target )
         self._exec( cmd, shell=True )
 
