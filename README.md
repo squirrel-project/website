@@ -3,6 +3,20 @@ Website
 
 Repository for hosting content on the SQUIRREL website (http://squirrel-project.eu/)
 
+# Quick installation
+
+Clone the squirrel-project website repository (or preferably your own fork of it)
+```bash
+git clone git clone git@github.com:squirrel-project/website
+```
+
+Then simply edit the html files. For testing run:
+```bash
+website/debug_server.py
+```
+
+You can now browse to the url http://localhost:9000 and get a live update whenever you edit any html file located in squirrel_website/html.
+
 # Installation
 
 Create a new catkin workspace for the squirrel project website:
