@@ -7,7 +7,7 @@ Repository for hosting content on the SQUIRREL website (http://squirrel-project.
 
 Clone the squirrel-project website repository (or preferably your own fork of it)
 ```bash
-git clone git clone git@github.com:squirrel-project/website
+git clone git@github.com:squirrel-project/website
 ```
 
 Then simply edit the html files. For testing run:
