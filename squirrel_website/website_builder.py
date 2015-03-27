@@ -63,7 +63,8 @@ class Builder( object ):
         cloneRepository = ' && '.join([
             'git clone %s %s' % ( self._repository, self._targetPath ),
             'cd %s' % self._targetPath,
-            'git rm -rf *.html', 
+            'git rm -rf *.html',
+            'git rm -rf docs',
             'git rm -rf images',
             'git rm --ignore-unmatch -rf videos'
         ])
@@ -132,6 +133,7 @@ class Builder( object ):
         self.compactCss()
         self.buildPages()
         self.buildRaw()
+        self.copyDocs()
         self.copyImages()
         self.copyVideos()
 
@@ -182,6 +184,12 @@ class Builder( object ):
                 out.write( self._getHeader( filename ))
                 out.write( tpl.read() )
                 out.write( self._footer )
+
+    def copyDocs( self ):
+        src    = '%s/docs' % self._basePath
+        target = '%s/docs' % self._buildPath
+        cmd = 'cp -r %s %s' % ( src, target )
+        self._exec( cmd, shell=True )
 
     def copyImages( self ):
         src    = '%s/images' % self._basePath
