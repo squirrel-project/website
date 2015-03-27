@@ -63,9 +63,9 @@ class Builder( object ):
         cloneRepository = ' && '.join([
             'git clone %s %s' % ( self._repository, self._targetPath ),
             'cd %s' % self._targetPath,
-            'git rm -rf *.html',
-            'git rm -rf docs',
-            'git rm -rf images',
+            'git rm --ignore-unmatch -rf *.html',
+            'git rm --ignore-unmatch -rf docs',
+            'git rm --ignore-unmatch -rf images',
             'git rm --ignore-unmatch -rf videos'
         ])
         args = ( self._repository, self._targetPath )
