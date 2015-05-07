@@ -3,6 +3,10 @@ Website
 
 Repository for hosting content on the SQUIRREL website (http://squirrel-project.eu/)
 
+# Publications/Papers
+Please DO NOT ENTER your PUBLICATIONS MANUALLY to the website. We have installed an automatic publications website generator script in the management package that will overwrite the publications website with the bibtex information provided there.
+Please consider the instructions in the main readme.md file of the management package on adding new publications.
+
 # Quick installation
 
 Clone the squirrel-project website repository (or preferably your own fork of it)
