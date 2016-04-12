@@ -26,6 +26,7 @@
                 <li class="contacts"><a href="contacts.html">Contacts</a></li>
                 <li class="public-deliverables"><a href="public-deliverables.html">Public Deliverables</a></li>
                 <li class="publications"><a href="publications.html">Publications</a></li>
+                <li class="ci-server"><a href="buildbot.html">Buildbot server</a></li>
             </ul>
         </div>
     </div>
